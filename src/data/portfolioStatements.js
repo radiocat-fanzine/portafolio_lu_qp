@@ -16,4 +16,5 @@ export const portfolioStatements = {
         description:
         'Visual systems and brand identities developed through cultural narrative, technical precision, and long-term brand evolution.'
     }
+
 }

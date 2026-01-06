@@ -1,0 +1,52 @@
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.layout-content {
+    flex: 1;
+    padding: 2rem; /* espacio interno */
+    max-width: 1000px; /* ancho máximo de contenido */
+    margin-left: auto; /* centra respecto al espacio disponible */
+    margin-right: auto; /* centra respecto al espacio disponible */
+}
+
+main {
+    flex: 1;                 /* ocupa todo el espacio restante */
+    padding: 2rem;           /* espacio interno consistente */
+    max-width: 1000px;       /* limita el ancho para buena legibilidad */
+    margin-left: auto;        /* centra horizontalmente respecto al contenedor */
+    margin-right: auto;       /* centra horizontalmente respecto al contenedor */
+    box-sizing: border-box;   /* evita que padding afecte ancho total */
+}
+
+/* ==============================
+    Layout responsive
+================================ */
+
+/* Tablet / mitad desktop */
+@media (max-width: 1200px) {
+    .layout-content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        max-width: 900px; /* ajusta un poco para tablet */
+    }
+}
+
+/* Tablet y móviles */
+@media (max-width: 992px) {
+    .layout-content {
+        padding-left: 0.1rem;
+        padding-right: 1rem;
+        max-width: 100%; /* ocupa todo el ancho disponible */
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    main {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+

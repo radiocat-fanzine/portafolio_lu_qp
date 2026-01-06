@@ -1,0 +1,37 @@
+:root {
+    /* 🌑 Fondos */
+    --color-bg-main: #1D2C2F;            /* fondo oscuro ocasional */
+    --color-bg-soft: #F3EFFA;            /* lavanda etéreo (base del site) */
+    --color-bg-card: #E9E2F4;            /* lila frío visible (NO blanco) */
+
+    /* 🌸 Identidad Numia */
+    --color-lila-water: #BBA5DB;         /* identidad base */
+    --color-blue-glicina: #A7C2E3;       /* fondos secundarios */
+    --color-orchid: #B45ACF;             /* CTA / botones principales */
+    --color-blue-moon: #4D6EB2;          /* links / acciones secundarias */
+    --color-fuchsia-lunar: #E86AB5;      /* highlights puntuales */
+    --color-green-lotus: #50C89F;        /* microinteracciones */
+    --color-rose-aura: #EFA39D;          /* acentos cálidos */
+
+    /* ✍️ Texto */
+    --color-text-primary: #2E2A3F;       /* azul-violeta profundo */
+    --color-text-secondary: #5F5A7A;     /* violeta grisáceo suave */
+    --color-text-inverted: #F7F4FD;
+
+    --color-link: var(--color-blue-moon);
+
+    /* 🌫️ Sombras */
+    --shadow-soft: 0 12px 30px rgba(78, 58, 120, 0.12);
+    --shadow-ethereal: 0 24px 60px rgba(187, 165, 219, 0.25);
+
+    /* 🌀 Gradientes (solo decorativos, NO botones) */
+    --gradient-lunar:
+        linear-gradient(135deg, #1D2C2F 0%, #4D6EB2 50%, #BBA5DB 100%);
+
+    --gradient-floral:
+        linear-gradient(135deg, #A7C2E3 0%, #EF6FBF 50%, #EFA39D 100%);
+
+    --gradient-orchid:
+        linear-gradient(135deg, #C56EDC 0%, #50C89F 100%);
+}
+

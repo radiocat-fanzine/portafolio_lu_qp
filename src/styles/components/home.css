@@ -1,0 +1,89 @@
+.home {
+    max-width: 1000px;
+    padding: 2rem;
+}
+
+.home-header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* ==============================
+    Frame de perfil
+================================= */
+.profile-frame {
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-ethereal);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* transición suave para resize */
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* La imagen dentro del frame */
+.profile-frame .profile-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Frame se adaptado al tamaño de la imagen */
+.profile-frame.responsive {
+    width: 160px;
+    height: 160px;
+}
+
+@media (max-width: 1200px) {
+    .profile-frame.responsive {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .profile-frame.responsive {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-frame.responsive {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-frame.responsive {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+.home-title h2 {
+    font-weight: 400;
+    color: var(--color-text-secondary);
+}
+
+.home-intro {
+    margin-top: 2rem;
+    max-width: 800px;
+}
+
+.home-metadata {
+    margin-top: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+

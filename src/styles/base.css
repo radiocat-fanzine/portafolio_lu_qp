@@ -1,0 +1,184 @@
+/* ==============================
+    Base
+================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: inherit;
+    line-height: 1.6;
+    font-weight: 400;
+
+    background-color: var(--color-bg-soft);
+    color: var(--color-text-primary);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==============================
+    Typography defaults
+================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0;
+}
+
+/* ==============================
+    Links
+================================ */
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+    Buttons – System
+================================ */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.65rem 1.6rem;
+    border-radius: 999px;
+    border: none;
+    margin: 1.5rem 0;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+/* Primary CTA */
+.button-primary {
+    background-color: var(--color-orchid);
+    color: var(--color-text-inverted);
+    box-shadow: 0 8px 24px rgba(197, 110, 220, 0.35);
+}
+
+.button-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 32px rgba(197, 110, 220, 0.45);
+}
+
+
+/* ==============================
+    Lists
+================================ */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* ==============================
+    Imágenes responsive grandes
+================================= */
+img.responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: max-width 0.3s ease, transform 0.3s ease;
+}
+
+/* Tablet / mitad de desktop */
+@media (max-width: 1200px) {
+    img.responsive {
+        max-width: 90%;
+    }
+}
+
+/* Tablet grande / pequeño desktop */
+@media (max-width: 992px) {
+    img.responsive {
+        max-width: 85%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    img.responsive {
+        max-width: 75%;
+    }
+}
+
+/* Mobile pequeño */
+@media (max-width: 480px) {
+    img.responsive {
+        max-width: 65%;
+    }
+}
+
+/* ==============================
+    Imágenes pequeñas responsive (perfil, logos)
+================================= */
+.img-small.responsive {
+    max-width: 160px;   /* tamaño máximo inicial */
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;      /* mantiene proporción y recorta si es necesario */
+    object-position: center;
+    transition: max-width 0.3s ease, transform 0.3s ease;
+}
+
+/* Tablet / mitad de desktop */
+@media (max-width: 1200px) {
+    .img-small.responsive {
+        max-width: 140px;
+    }
+}
+
+/* Tablet grande / pequeño desktop */
+@media (max-width: 992px) {
+    .img-small.responsive {
+        max-width: 120px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .img-small.responsive {
+        max-width: 100px;
+    }
+}
+
+/* Mobile pequeño */
+@media (max-width: 480px) {
+    .img-small.responsive {
+        max-width: 80px;
+    }
+}

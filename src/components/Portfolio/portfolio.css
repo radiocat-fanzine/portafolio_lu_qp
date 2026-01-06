@@ -245,4 +245,79 @@
     color: var(--color-rose-aura);
 }
 
+/* ==============================
+    Project Hero Tagline Overlay
+================================ */
+
+.project-hero {
+    position: relative;
+}
+
+/* Contenedor del texto */
+.project-hero-tagline {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+
+    padding-left: 96px;
+    padding-right: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    max-width: 60%;
+    pointer-events: none;
+}
+
+/* Texto */
+.project-hero-text {
+    max-width: 520px;
+}
+
+.project-hero-text h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-text-inverted);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-hero-text p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.85);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ==============================
+    Responsive
+================================ */
+
+@media (max-width: 768px) {
+    .project-hero-tagline {
+        max-width: 100%;
+        padding: 32px;
+    }
+
+    .project-hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-hero-text p {
+        font-size: 0.9rem;
+    }
+}
+
 

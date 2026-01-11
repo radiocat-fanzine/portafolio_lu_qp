@@ -26,15 +26,6 @@
     margin-bottom: 0.5rem;
 }
 
-
-.certificate-logo img {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    object-fit: contain;
-    display: block;
-}
-
 .certificate-card {
     padding: 1.75rem;
 }
@@ -44,7 +35,7 @@
     aspect-ratio: 4 / 3;
     border-radius: 12px;
     overflow: hidden;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.04);
 }
 
 .certificate-media img {
@@ -53,7 +44,6 @@
     object-fit: contain;
     display: block;
 }
-
 
 .certificate-actions a {
     display: inline-block;
@@ -90,13 +80,14 @@
 }
 
 .motivation-wrapper {
-    margin-top: 3.5rem;
-    max-width: 720px;
+    margin-top: 3rem;
+    max-width: 760px;
 }
 
 .motivation-card {
     background-color: var(--color-bg-card);
     border-radius: 20px;
-    padding: 2rem 2.25rem;
+    padding: 2rem 2.5rem;
     box-shadow: var(--shadow-soft);
 }
+

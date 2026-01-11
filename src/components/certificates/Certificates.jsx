@@ -11,7 +11,7 @@ function Certificates() {
 
     return (
         <section className="certificates-page">
-            
+
             {/* Header */}
             <header className="certificates-header">
                 <h1>Certificates & Credentials</h1>
@@ -21,9 +21,11 @@ function Certificates() {
                 </p>
             </header>
 
-            {/* CERTIFICATES GRID */}
+            {/* CERTIFICATES */}
             <div className="certificates-grid">
-                {certificateItems.map(item => (
+            {certificates
+                .filter(item => item.type === 'certificate')
+                .map(item => (
                 <article key={item.id} className="certificate-card">
 
                     <div className="certificate-media">
@@ -44,47 +46,46 @@ function Certificates() {
                     </div>
 
                     <div className="certificate-actions">
-                    <a
-                        href={item.file}
-                        download
-                        className="btn-primary"
-                    >
+                    <a href={item.file} download>
                         Download PDF
                     </a>
                     </div>
 
                 </article>
-                ))}
+            ))}
             </div>
 
             {/* MOTIVATION LETTER */}
-            {motivationItem && (
-                <div className="motivation-wrapper">
-                <article className="motivation-card">
-                    <h3>{motivationItem.title}</h3>
-                    <p className="certificate-subtitle">
-                    {motivationItem.subtitle}
-                    </p>
+            {certificates
+            .filter(item => item.type === 'text')
+            .map(item => {
+                const isOpen = openTextId === item.id
+
+                return (
+                <div key={item.id} className="motivation-wrapper">
+                    <article className="motivation-card">
+
+                    <h3>{item.title}</h3>
+                    <p className="certificate-subtitle">{item.subtitle}</p>
 
                     <button
-                    className="certificate-toggle"
-                    onClick={() => toggleText(motivationItem.id)}
-                    aria-expanded={openTextId === motivationItem.id}
+                        className="certificate-toggle"
+                        onClick={() => toggleText(item.id)}
+                        aria-expanded={isOpen}
                     >
-                    {openTextId === motivationItem.id
-                        ? 'Close motivation letter'
-                        : 'Read motivation letter'}
+                        {isOpen ? 'Close motivation letter' : 'Read motivation letter'}
                     </button>
 
-                    {openTextId === motivationItem.id && (
-                    <div className="certificate-text">
-                        {motivationItem.content}
-                    </div>
+                    {isOpen && (
+                        <div className="certificate-text">
+                        {item.content}
+                        </div>
                     )}
-                </article>
-                </div>
-            )}
 
+                    </article>
+                </div>
+                )
+            })}
             </section>
     )
 }

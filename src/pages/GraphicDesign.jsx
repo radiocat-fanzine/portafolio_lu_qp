@@ -16,7 +16,7 @@ function Product() {
         </header>
 
         <div className="portfolio-grid">
-            {projects.map((project, index) => (
+            {graphicDesignProjects.map((project, index) => (
                 <ProjectCard
                     key={project.id}
                     project={project}

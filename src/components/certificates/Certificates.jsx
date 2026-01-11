@@ -11,104 +11,81 @@ function Certificates() {
 
     return (
         <section className="certificates-page">
-
+            
             {/* Header */}
             <header className="certificates-header">
                 <h1>Certificates & Credentials</h1>
                 <p>
-                    Professional training, internships, and personal motivation
-                    that support my design and development practice.
+                Professional training, internships, and personal motivation
+                that support my design and development practice.
                 </p>
             </header>
 
-            {/* Cards */}
+            {/* CERTIFICATES GRID */}
             <div className="certificates-grid">
-                {certificates.map(item => {
+                {certificateItems.map(item => (
+                <article key={item.id} className="certificate-card">
 
-                    /* ===========================
-                        PDF CERTIFICATES
-                    ============================ */
-                    if (item.type === 'certificate') {
-                        return (
-                            <article
-                                key={item.id}
-                                className="certificate-card"
-                            >
-                                <div className="certificate-card-header">
-                                    {item.logo && (
-                                        <img
-                                            src={item.logo}
-                                            alt={`${item.institution} logo`}
-                                            className="certificate-logo"
-                                        />
-                                    )}
-                                </div>
+                    <div className="certificate-media">
+                    {item.logo && (
+                        <img
+                        src={item.logo}
+                        alt={`${item.institution} logo`}
+                        />
+                    )}
+                    </div>
 
-                                <div className="certificate-card-content">
-                                    <h3>{item.title}</h3>
-                                    <p className="certificate-subtitle">
-                                        {item.subtitle}
-                                    </p>
-                                    <span className="certificate-institution">
-                                        {item.institution}
-                                    </span>
-                                </div>
+                    <div className="certificate-card-content">
+                    <h3>{item.title}</h3>
+                    <p className="certificate-subtitle">{item.subtitle}</p>
+                    <span className="certificate-institution">
+                        {item.institution}
+                    </span>
+                    </div>
 
-                                <div className="certificate-actions">
-                                    <a
-                                        href={item.file}
-                                        download
-                                        className="btn-primary"
-                                    >
-                                        Download PDF
-                                    </a>
-                                </div>
-                            </article>
-                        )
-                    }
+                    <div className="certificate-actions">
+                    <a
+                        href={item.file}
+                        download
+                        className="btn-primary"
+                    >
+                        Download PDF
+                    </a>
+                    </div>
 
-                    /* ===========================
-                        MOTIVATION LETTER
-                    ============================ */
-                    if (item.type === 'text') {
-                        const isOpen = openTextId === item.id
-
-                        return (
-                            <article
-                                key={item.id}
-                                className={`certificate-card ${isOpen ? 'open' : ''}`}
-                            >
-                                <div className="certificate-card-content">
-                                    <h3>{item.title}</h3>
-                                    <p className="certificate-subtitle">
-                                        {item.subtitle}
-                                    </p>
-
-                                    <button
-                                        className="certificate-toggle"
-                                        onClick={() => toggleText(item.id)}
-                                        aria-expanded={isOpen}
-                                    >
-                                        {isOpen
-                                            ? 'Close motivation letter'
-                                            : 'Read motivation letter'}
-                                    </button>
-
-                                    {isOpen && (
-                                        <div className="certificate-text">
-                                            {item.content}
-                                        </div>
-                                    )}
-                                </div>
-                            </article>
-                        )
-                    }
-
-                    return null
-                })}
+                </article>
+                ))}
             </div>
 
-        </section>
+            {/* MOTIVATION LETTER */}
+            {motivationItem && (
+                <div className="motivation-wrapper">
+                <article className="motivation-card">
+                    <h3>{motivationItem.title}</h3>
+                    <p className="certificate-subtitle">
+                    {motivationItem.subtitle}
+                    </p>
+
+                    <button
+                    className="certificate-toggle"
+                    onClick={() => toggleText(motivationItem.id)}
+                    aria-expanded={openTextId === motivationItem.id}
+                    >
+                    {openTextId === motivationItem.id
+                        ? 'Close motivation letter'
+                        : 'Read motivation letter'}
+                    </button>
+
+                    {openTextId === motivationItem.id && (
+                    <div className="certificate-text">
+                        {motivationItem.content}
+                    </div>
+                    )}
+                </article>
+                </div>
+            )}
+
+            </section>
     )
 }
 

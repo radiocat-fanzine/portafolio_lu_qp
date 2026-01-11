@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { graphicDesignProjects } from '../data/graphicDesignProjects'
 import { portfolioStatements } from '../data/portfolioStatements'
 import ProjectCard from '../components/Portfolio/ProjectCard'
 import ProjectModal from '../components/Portfolio/ProjectModal'

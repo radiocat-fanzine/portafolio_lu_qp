@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { productProjects } from '../data/productProjects'
+import { uxResearchProjects } from '../data/uxResearchProjects'
 import { portfolioStatements } from '../data/portfolioStatements'
 import ProjectCard from '../components/Portfolio/ProjectCard'
 import ProjectModal from '../components/Portfolio/ProjectModal'

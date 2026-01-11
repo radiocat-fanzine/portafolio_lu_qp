@@ -3,7 +3,7 @@ import Layout from './components/Layout'
 import ProjectLayout from './layout/ProjectLayout'
 
 import Home from './pages/Home'
-import Certificates from './pages/Certificates'
+import Certificates from "./components/certificates/Certificates";
 
 import Product from './pages/Product'
 import UXResearch from './pages/UXResearch'

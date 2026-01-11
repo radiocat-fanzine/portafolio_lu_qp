@@ -38,6 +38,9 @@
 ================================================= */
 
 .project-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto; 
     background-color: var(--color-bg-card);
     border-radius: 16px;
     overflow: hidden;
@@ -60,8 +63,9 @@
 
 .project-card-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+    display: block;
     transition: transform 0.6s ease;
 }
 
@@ -176,10 +180,11 @@
 
 .project-modal {
     background-color: var(--color-bg-main);
+    color: var(--color-text-inverted);
     border-radius: 20px;
     max-width: 1000px;
     width: 100%;
-    padding: 2rem;
+    padding: 0;
     position: relative;
 }
 
@@ -197,33 +202,69 @@
 
 /* Modal content */
 
+.project-content {
+    padding: 2.5rem 3rem 3rem;
+}
+
 .project-header {
-    margin-bottom: 2rem;
-}
-
-.project-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-}
-
-.project-subtitle {
-    margin: 0.3rem 0 0.5rem;
-    color: var(--color-text-secondary);
-}
-
-.project-tech {
-    font-size: 0.85rem;
-    color: var(--color-lila-water);
-}
-
-.project-section {
+    padding: 2rem 3rem 0;
     margin-bottom: 2.5rem;
 }
 
-.project-section h2 {
-    margin-bottom: 0.75rem;
-    font-size: 1.2rem;
+.project-header h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0 0 0.5rem;
+    color: var(--color-text-inverted);
 }
+
+.project-subtitle {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: rgba(245, 246, 250, 0.75);
+}
+
+.project-tech {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-lila-water);
+}
+
+
+.project-section {
+    margin-bottom: 3rem;
+}
+
+.project-section h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--color-text-inverted);
+}
+
+.project-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.1rem;
+    color: rgba(245, 246, 250, 0.9);
+    max-width: 720px;
+}
+
+.project-section ul {
+    padding-left: 1.2rem;
+    margin: 0.75rem 0 1.25rem;
+}
+
+.project-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: rgba(245, 246, 250, 0.85);
+}
+
 
 .project-links {
     list-style: none;
@@ -245,6 +286,41 @@
     color: var(--color-rose-aura);
 }
 
+.project-modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: none;
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 1.4rem;
+    line-height: 1;
+
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.project-modal-close:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: scale(1.05);
+}
+
+.project-modal-close:focus-visible {
+    outline: 2px solid var(--color-lila-water);
+    outline-offset: 3px;
+}
+
+
 /* ==============================
     Project Hero Tagline Overlay
 ================================ */
@@ -252,6 +328,13 @@
 .project-hero {
     position: relative;
 }
+
+.project-hero img {
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
 
 /* Contenedor del texto */
 .project-hero-tagline {
@@ -320,4 +403,24 @@
     }
 }
 
+@media (max-width: 768px) {
+    .project-content {
+        padding: 1.75rem 1.5rem 2.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-modal-close {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+/* Projects JSX */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
 

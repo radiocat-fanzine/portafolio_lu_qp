@@ -4,6 +4,9 @@ import { portfolioStatements } from '../data/portfolioStatements'
 import ProjectCard from '../components/Portfolio/ProjectCard'
 import ProjectModal from '../components/Portfolio/ProjectModal'
 
+import '../components/Portfolio/portfolio.css'
+
+
 function Product() {
     const [activeProject, setActiveProject] = useState(null)
     const { title, description } = portfolioStatements.uxResearch

@@ -38,17 +38,17 @@ function Certificates() {
                     </div>
 
                     <div className="certificate-card-content">
-                    <h3>{item.title}</h3>
-                    <p className="certificate-subtitle">{item.subtitle}</p>
-                    <span className="certificate-institution">
-                        {item.institution}
-                    </span>
-                    </div>
+                        <h3>{item.title}</h3>
+                        <p className="certificate-subtitle">{item.subtitle}</p>
+                        <span className="certificate-institution">
+                            {item.institution}
+                        </span>
 
-                    <div className="certificate-actions">
-                    <a href={item.file} download>
-                        Download PDF
-                    </a>
+                        <div className="certificate-actions">
+                            <a href={item.file} download>
+                                Download PDF
+                            </a>
+                        </div>
                     </div>
 
                 </article>

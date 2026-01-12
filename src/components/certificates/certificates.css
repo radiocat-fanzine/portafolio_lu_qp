@@ -10,7 +10,7 @@
 
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 340px));
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 1.5rem;
     margin-top: 2.5rem;
 }
@@ -25,17 +25,36 @@
     padding: 1.5rem;
 }
 
+@media (max-width: 520px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-card {
+        flex-direction: column;
+    }
+}
+
 .certificate-card-header {
+    width: 88px;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.04);
     flex-shrink: 0;
 }
 
 .certificate-logo {
-    width: 88px;
-    object-fit: contain;
-    border-radius: 12px;
-    background-color: rgba(255,255,255,0.04);
-    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
+    transition: transform 0.35s ease;
+}
+
+.certificate-card:hover .certificate-logo {
+    transform: scale(1.06);
 }
 
 .certificate-card-content {
@@ -61,12 +80,12 @@
 }
 
 .certificate-actions {
-    margin-top: auto;
+    margin-top: 0.75rem;
 }
 
 .certificate-actions a {
     display: inline-flex;
-    align-self: center;
+    align-self: flex-start;
     padding: 0.45rem 1rem;
     border-radius: 6px;
     background-color: var(--color-lila-water);
@@ -157,11 +176,35 @@
 
     .certificate-card {
         flex-direction: column;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .certificate-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
     }
 
     .certificate-card-header {
         align-self: flex-start;
     }
 }
+
+.certificate-card-header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.04),
+        rgba(0,0,0,0.08)
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.certificate-card:hover .certificate-card-header::after {
+    opacity: 1;
+}
+
 
 

@@ -1,38 +1,37 @@
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
     margin-top: 2.5rem;
-    }
-
+}
 
 .certificate-card {
     background-color: var(--color-bg-card);
     border-radius: 16px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
     box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
 }
 
 .certificate-card-header {
-    width: 100%;
+    flex-shrink: 0;
 }
 
 .certificate-logo {
-    width: 100%;
-    height: 11.25rem;
-    aspect-ratio: 4 / 3;
-    object-fit: cover; 
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
     display: block;
-    background-color: rgba(255,255,255,0.03); 
 }
 
+
 .certificate-card-content {
-    padding: 1rem 1.25rem 0.75rem;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.35rem;
 }
 
 .certificate-media {
@@ -110,17 +109,31 @@
 }
 
 .certificate-card-content h3 {
-    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    margin: 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .certificate-subtitle {
-    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
 }
 
 .certificates-header p {
     max-width: 640px;
     line-height: 1.6;
     color: var(--color-text-secondary);
+}
+
+.certificate-institution {
+    font-size: 0.75rem;
+    opacity: 0.7;
 }
 
 

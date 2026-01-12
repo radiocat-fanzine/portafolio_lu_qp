@@ -1,5 +1,11 @@
 .certificates-page {
-    padding: 0 16px;
+    padding: 0 1.25rem;
+}
+
+@media (max-width: 520px) {
+    .certificates-page {
+        padding: 0 1.5rem;
+    }
 }
 
 .certificates-grid {
@@ -15,8 +21,8 @@
     box-shadow: var(--shadow-soft);
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    padding: 1.25rem;
+    gap: 1.25rem;
+    padding: 1.5rem;
 }
 
 .certificate-card-header {
@@ -24,12 +30,11 @@
 }
 
 .certificate-logo {
-    width: 64px;
-    height: 64px;
+    width: 88px;
     object-fit: contain;
     border-radius: 12px;
     background-color: rgba(255,255,255,0.04);
-    padding: 0.35rem;
+    padding: 0.5rem;
     display: block;
 }
 
@@ -60,15 +65,16 @@
 }
 
 .certificate-actions a {
-    display: inline-block;
-    align-self: flex-start;
-    padding: 0.45rem 0.9rem;
+    display: inline-flex;
+    align-self: center;
+    padding: 0.45rem 1rem;
     border-radius: 6px;
     background-color: var(--color-lila-water);
     color: var(--color-text-inverted);
     font-weight: 500;
     font-size: 0.8rem;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .certificate-text {

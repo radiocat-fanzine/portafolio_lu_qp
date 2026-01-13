@@ -1,210 +1,208 @@
+/* =====================================================
+   PAGE CONTAINER
+===================================================== */
+
 .certificates-page {
-    padding: 0 1.25rem;
+  padding: 0 1.25rem;
 }
 
 @media (max-width: 520px) {
-    .certificates-page {
-        padding: 0 1.5rem;
-    }
+  .certificates-page {
+    padding: 0 1.5rem;
+  }
 }
 
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-}
 
-.certificate-card {
-    background-color: var(--color-bg-card);
-    border-radius: 16px;
-    box-shadow: var(--shadow-soft);
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-    padding: 1.5rem;
-}
-
-@media (max-width: 520px) {
-    .certificates-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .certificate-card {
-        flex-direction: column;
-    }
-}
-
-.certificate-card-header {
-    width: 88px;
-    aspect-ratio: 1 / 1;
-    border-radius: 14px;
-    overflow: hidden;
-    background-color: rgba(255,255,255,0.04);
-    flex-shrink: 0;
-}
-
-.certificate-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    transition: transform 0.35s ease;
-}
-
-.certificate-card:hover .certificate-logo {
-    transform: scale(1.06);
-}
-
-.certificate-card-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.certificate-media {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    border-radius: 12px;
-    max-height: 10rem;
-    overflow: hidden;
-    background: rgba(255,255,255,0.04);
-}
-
-.certificate-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-.certificate-actions {
-    margin-top: 0.75rem;
-}
-
-.certificate-actions a {
-    display: inline-flex;
-    align-self: flex-start;
-    padding: 0.45rem 1rem;
-    border-radius: 6px;
-    background-color: var(--color-lila-water);
-    color: var(--color-text-inverted);
-    font-weight: 500;
-    font-size: 0.8rem;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.certificate-text {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: var(--color-text-secondary);
-    white-space: pre-line;
-}
-
-.certificate-toggle {
-    background: none;
-    border: none;
-    color: var(--color-lila-water);
-    font-weight: 500;
-    cursor: pointer;
-    padding: 0;
-    margin-top: 0.5rem;
-}
-
-.certificate-toggle:hover {
-    color: var(--color-rose-aura);
-}
-
-.motivation-wrapper {
-    margin-top: 3rem;
-    max-width: 760px;
-}
-
-.motivation-card {
-    background-color: var(--color-bg-card);
-    border-radius: 20px;
-    padding: 2rem 2.5rem;
-    box-shadow: var(--shadow-soft);
-}
+/* =====================================================
+   HEADER
+===================================================== */
 
 .certificates-header {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .certificates-header h1 {
-    margin-bottom: 0.75rem;
-}
-
-.certificate-card-content h3 {
-    font-size: 0.95rem;
-    line-height: 1.35;
-    margin: 0 0 0.25rem;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.certificate-subtitle {
-    font-size: 0.85rem;
-    margin-bottom: 0.35rem;
-    color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
 }
 
 .certificates-header p {
-    max-width: 640px;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
+  max-width: 640px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+
+/* =====================================================
+   CERTIFICATE CARD
+===================================================== */
+
+.certificate-card {
+  background-color: var(--color-bg-card);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.28);
+}
+
+
+/* =====================================================
+   LOGO / MEDIA
+===================================================== */
+
+.certificate-media {
+  width: 80px;
+  height: 80px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.04);
+}
+
+.certificate-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* recorta laterales */
+  object-position: center;  /* centra el logo */
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.certificate-card:hover .certificate-media img {
+  transform: scale(1.06);
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.certificate-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-card-content h3 {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin: 0 0 0.25rem;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.certificate-subtitle {
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-secondary);
 }
 
 .certificate-institution {
-    font-size: 0.75rem;
-    opacity: 0.7;
+  font-size: 0.75rem;
+  opacity: 0.7;
 }
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.certificate-actions {
+  margin-top: 0.75rem;
+}
+
+.certificate-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  background-color: var(--color-lila-water);
+  color: var(--color-text-inverted);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   MOTIVATION LETTER
+===================================================== */
+
+.motivation-wrapper {
+  margin-top: 3rem;
+  max-width: 760px;
+}
+
+.motivation-card {
+  background-color: var(--color-bg-card);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.certificate-toggle {
+  background: none;
+  border: none;
+  color: var(--color-lila-water);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.certificate-toggle:hover {
+  color: var(--color-rose-aura);
+}
+
+.certificate-text {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  white-space: pre-line;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 520px) {
-    .certificates-grid {
-        grid-template-columns: 1fr;
-    }
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .certificate-card {
-        flex-direction: column;
-        transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .certificate-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-    }
-
-    .certificate-card-header {
-        align-self: flex-start;
-    }
+  .certificate-card {
+    flex-direction: column;
+  }
 }
 
-.certificate-card-header::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(255,255,255,0.04),
-        rgba(0,0,0,0.08)
-    );
-    opacity: 0;
-    transition: opacity 0.35s ease;
-}
-
-.certificate-card:hover .certificate-card-header::after {
-    opacity: 1;
-}
 
 
 

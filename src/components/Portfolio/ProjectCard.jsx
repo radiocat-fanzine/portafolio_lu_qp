@@ -26,9 +26,9 @@ function ProjectCard({ project, onClick }) {
                     src={card.image}
                     alt={card.alt || meta.title}
                 />
-
-                {/* Overlay content */}
-                <div className="project-card-overlay">
+            </div>
+            {/* Content */}
+                <div className="project-card-content">
                     <h3 className="project-card-title">
                         {meta.title}
                     </h3>
@@ -45,7 +45,6 @@ function ProjectCard({ project, onClick }) {
                         )}
                     </div>
                 </div>
-            </div>
         </article>
     )
 }

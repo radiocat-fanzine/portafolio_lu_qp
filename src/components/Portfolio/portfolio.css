@@ -73,44 +73,21 @@
     transform: scale(1.04);
 }
 
-.project-card:hover .project-card-content,
-.project-card:focus-visible .project-card-content {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* Gradient overlay */
-.project-card-image::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(15, 12, 30, 0.75),
-        rgba(15, 12, 30, 0.35) 45%,
-        transparent 75%
-    );
-}
-
-/* Text overlay */
+/* Text */
 .project-card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem 1.1rem;
-    color: var(--color-text-inverted);
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
+    position: static;
+    padding: 0.9rem 1rem 1.1rem;
+    color: var(--color-text-primary);
 }
 
 /* Title always visible */
 .project-card-title {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-text-primary);
+
     display: -webkit-box;
     line-clamp: 2;
     -webkit-line-clamp: 2;
@@ -118,43 +95,26 @@
     overflow: hidden;
 }
 
-/* Meta hidden by default */
-.project-card-subtitle,
-.project-card-tech {
-    opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.project-card:hover .project-card-subtitle,
-.project-card:hover .project-card-tech,
-.project-card:focus-visible .project-card-subtitle,
-.project-card:focus-visible .project-card-tech {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .project-card-subtitle {
     margin: 0.3rem 0 0;
     font-size: 0.85rem;
     line-height: 1.35;
+    color: var(--color-text-secondary);
+
     display: -webkit-box;
     line-clamp: 2;
     -webkit-line-clamp: 2; /* máximo 2 líneas */
     -webkit-box-orient: vertical;
     overflow: hidden;
-
-    font-size: 0.85rem;
-    line-height: 1.35;
 }
 
 .project-card-tech {
     display: inline-block;
-    margin-top: 0.25rem;
+    margin-top: 0.4rem;
     font-size: 0.7rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    opacity: 0.75;
+    color: var(--color-text-muted);
 }
 
 /* Accessibility */

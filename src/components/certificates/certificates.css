@@ -1,206 +1,213 @@
 /* =====================================================
-   PAGE CONTAINER
+    PAGE CONTAINER
 ===================================================== */
 
 .certificates-page {
-  padding: 0 1.25rem;
+    padding: 0 1.25rem;
 }
 
 @media (max-width: 520px) {
-  .certificates-page {
-    padding: 0 1.5rem;
-  }
+    .certificates-page {
+        padding: 0 1.5rem;
+    }
 }
 
 
 /* =====================================================
-   HEADER
+    HEADER
 ===================================================== */
 
 .certificates-header {
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 .certificates-header h1 {
-  margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .certificates-header p {
-  max-width: 640px;
-  line-height: 1.6;
-  color: var(--color-text-secondary);
+    max-width: 640px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
 }
 
 
 /* =====================================================
-   GRID
+    GRID
 ===================================================== */
 
 .certificates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 
 /* =====================================================
-   CERTIFICATE CARD
+    CERTIFICATE CARD
 ===================================================== */
 
 .certificate-card {
-  background-color: var(--color-bg-card);
-  border-radius: 16px;
-  box-shadow: var(--shadow-soft);
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  padding: 1.5rem;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+    background-color: var(--color-bg-card);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .certificate-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.28);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.28);
 }
 
 
 /* =====================================================
-   LOGO / MEDIA
+    LOGO / MEDIA
 ===================================================== */
 
 .certificate-media {
-  width: 80px;
-  height: 80px;
-  border-radius: 14px;
-  overflow: hidden;
-  flex-shrink: 0;
-  background: rgba(255,255,255,0.04);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.04);
 }
 
 .certificate-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;        /* recorta laterales */
-  object-position: center;  /* centra el logo */
-  display: block;
-  transition: transform 0.35s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* recorta laterales */
+    object-position: center;  /* centra el logo */
+    display: block;
+    transition: transform 0.35s ease;
 }
 
 .certificate-card:hover .certificate-media img {
-  transform: scale(1.06);
+    transform: scale(1.06);
 }
 
 
 /* =====================================================
-   CARD CONTENT
+    CARD CONTENT
 ===================================================== */
 
 .certificate-card-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .certificate-card-content h3 {
-  font-size: 0.95rem;
-  line-height: 1.35;
-  margin: 0 0 0.25rem;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    margin: 0 0 0.25rem;
 
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
 }
 
 .certificate-subtitle {
-  font-size: 0.85rem;
-  margin-bottom: 0.35rem;
-  color: var(--color-text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+    color: var(--color-text-secondary);
 }
 
 .certificate-institution {
-  font-size: 0.75rem;
-  opacity: 0.7;
+    font-size: 0.75rem;
+    opacity: 0.7;
 }
 
 
 /* =====================================================
-   ACTIONS
+    ACTIONS
 ===================================================== */
 
 .certificate-actions {
-  margin-top: 0.75rem;
+    margin-top: 0.75rem;
 }
 
 .certificate-actions a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.45rem 1rem;
-  border-radius: 6px;
-  background-color: var(--color-lila-water);
-  color: var(--color-text-inverted);
-  font-weight: 500;
-  font-size: 0.8rem;
-  text-decoration: none;
-  white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+    background-color: var(--color-lila-water);
+    color: var(--color-text-inverted);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 
 /* =====================================================
-   MOTIVATION LETTER
+    MOTIVATION LETTER
 ===================================================== */
 
 .motivation-wrapper {
-  margin-top: 3rem;
-  max-width: 760px;
+    margin-top: 3rem;
+    max-width: 760px;
 }
 
 .motivation-card {
-  background-color: var(--color-bg-card);
-  border-radius: 20px;
-  padding: 2rem 2.5rem;
-  box-shadow: var(--shadow-soft);
+    background-color: var(--color-bg-card);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.motivation-card h3 {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    margin: 0 0 0.25rem;
 }
 
 .certificate-toggle {
-  background: none;
-  border: none;
-  color: var(--color-lila-water);
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0;
-  margin-top: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--color-lila-water);
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 0.5rem;
 }
 
 .certificate-toggle:hover {
-  color: var(--color-rose-aura);
+    color: var(--color-rose-aura);
 }
 
 .certificate-text {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: var(--color-text-secondary);
-  white-space: pre-line;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    white-space: pre-line;
 }
 
 
 /* =====================================================
-   RESPONSIVE
+    RESPONSIVE
 ===================================================== */
 
 @media (max-width: 520px) {
-  .certificates-grid {
-    grid-template-columns: 1fr;
-  }
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .certificate-card {
-    flex-direction: column;
-  }
+    .certificate-card {
+        flex-direction: column;
+    }
 }
 
 

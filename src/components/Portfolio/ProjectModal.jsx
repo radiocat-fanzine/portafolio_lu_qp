@@ -19,15 +19,22 @@ function ProjectModal({ project, onClose }) {
             {hero?.banner && (
             <div className="project-hero">
                 <img src={hero.banner} alt={hero.alt || meta.title} />
+
+                {/* Overlay header */}
+                <div className="project-hero-tagline">
+                <div className="project-hero-text">
+                    <h1>{meta.title}</h1>
+                    <p>{meta.subtitle}</p>
+
+                    {meta.tech && (
+                    <span className="project-tech">
+                        {meta.tech}
+                    </span>
+                    )}
+                </div>
+                </div>
             </div>
             )}
-
-            {/* Header */}
-            <header className="project-header">
-            <h1>{meta.title}</h1>
-            <p className="project-subtitle">{meta.subtitle}</p>
-            <span className="project-tech">{meta.tech}</span>
-            </header>
 
             {/* Content */}
             <div className="project-content">

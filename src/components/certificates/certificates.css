@@ -155,8 +155,11 @@
 
 .motivation-wrapper {
     margin-top: 3rem;
-    max-width: 760px;
+    width: 100%;
+    max-width: 100%;
 }
+
+
 
 .motivation-card {
     background-color: var(--color-bg-card);

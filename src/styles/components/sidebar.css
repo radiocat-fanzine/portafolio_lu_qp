@@ -5,56 +5,155 @@
 .sidebar {
     width: 280px;
     height: 100vh;
-    position: relative;
-    z-index: 1;
+    position: relative; /* desktop */
+    z-index: 1000;
     top: 0;
     padding: 2rem 1.75rem;
     background-color: var(--color-bg-main);
     color: var(--color-text-inverted);
+
+    /* separación visual del contenido */
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+
+    /* sombra ligera de flotación */
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     overflow-y: auto;
 }
 
-/* Desktop: nunca mostrar hamburguesa */
-.sidebar-hamburger {
-    display: none;
+/* Scrollbar minimalista (Restaurada) */
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--color-bg-main) transparent;
+    border-radius: 2px;
+}
+.sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-bg-main) transparent;
 }
 
 /* ==============================
-    Mobile
+    Navegación (Restaurada)
 ================================ */
 
-@media (max-width: 768px) {
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    /* Sidebar cerrado */
+.sidebar nav li {
+    margin-bottom: 0.75rem;
+}
+
+/* Section titles (About, Portfolio, etc.) */
+.sidebar nav li strong,
+.sidebar-section-title {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-rose-aura, #EFA39D);
+}
+
+/* Links */
+.sidebar a {
+    color: var(--color-text-inverted, #F7F4FD);
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.sidebar a:hover {
+    opacity: 1;
+    color: var(--color-green-lotus, #50C89F);
+}
+
+/* Contact section (Restaurada) */
+.sidebar-contact {
+    margin-top: 1.5rem;
+    padding-top: 2.2rem;
+    border-top: 1px solid rgba(187, 165, 219, 0.25);
+}
+
+.sidebar-contact h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.sidebar-contact p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    opacity: 0.75;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-contact li {
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+
+.sidebar-contact a {
+    color: var(--color-green-lotus);
+    text-decoration: none;
+}
+
+.sidebar-contact a:hover {
+    color: var(--color-rose-aura);
+}
+
+/* ==============================
+    Mobile & Hamburger 
+================================ */
+
+.sidebar-hamburger {
+    display: none; /* Oculto en desktop */
+}
+
+@media (max-width: 768px) {
     .sidebar {
-        width: fit-content;
-        padding: 1rem 0;
-        background-color: transparent;
-        box-shadow: none;
-        position: relative;
-        overflow: visible;
+        position: fixed;
+        left: 0;
+        top: 0;
         transform: translateX(-100%);
         transition: transform 0.35s ease;
+        z-index: 2000;
+        width: 280px;
     }
 
-    .sidebar:not(.open) {
-        transform: translateX(-8px);
+    .sidebar.open {
+        transform: translateX(0);
     }
 
-    /* Botón hamburguesa (cerrado) */
     .sidebar-hamburger {
         display: block;
         position: fixed;
         top: 1rem;
         left: 1rem;
         z-index: 2100;
-
         cursor: pointer;
         font-size: 1.5rem;
         color: var(--color-text-inverted);
@@ -63,63 +162,23 @@
         border-radius: 4px;
         padding: 0.25rem 0.5rem;
         box-shadow: 1px 1px 8px rgba(0,0,0,0.25);
-
-        transition: background-color 0.25s ease,
-                    transform 0.25s ease,
-                    opacity 0.2s ease;
     }
 
-    /* Sidebar abierto */
-    .sidebar.open {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 280px;
-        height: 100vh;
-        background-color: var(--color-bg-main);
-        padding: 2rem 1.75rem;
-        z-index: 2000;
-        box-shadow: none;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        transform: translateX(0);
-    }
-
-    /* Contenido visible SOLO cuando está abierto */
-    .sidebar.open nav,
-    .sidebar.open .sidebar-contact {
-        display: block;
-        animation: sidebarFade 0.25s ease both;
-    }
-
-    /* Contenido oculto cuando está cerrado */
+    /* Mostrar/Ocultar contenido */
     .sidebar nav,
     .sidebar .sidebar-contact {
         display: none;
     }
 
-    /* Botón hamburguesa integrado al sidebar abierto */
-    .sidebar.open .sidebar-hamburger {
-        position: absolute;
-        top: 1.5rem;
-        left: 1.75rem;
-        color: var(--color-text-inverted);
-
-        background-color: transparent;
-        box-shadow: none;
-        opacity: 0.85;
-        transform: scale(0.95);
+    .sidebar.open nav,
+    .sidebar.open .sidebar-contact {
+        display: block;
+        animation: sidebarFade 0.25s ease both;
     }
-
-    .sidebar-hamburger:active {
-    transform: scale(0.92);
-}
-
 }
 
 /* ==============================
-    Fade suave del contenido
+    Keyframes & Overlay
 ================================ */
 
 @keyframes sidebarFade {
@@ -133,20 +192,14 @@
     }
 }
 
-/* ==============================
-    Overlay con blur (mobile)
-================================ */
-
 @media (max-width: 768px) {
     .sidebar-overlay {
         position: fixed;
         inset: 0;
         z-index: 1500;
-
         background: rgba(20, 16, 30, 0.35);
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
-
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s ease;
@@ -157,4 +210,3 @@
         pointer-events: auto;
     }
 }
-

@@ -4,7 +4,7 @@
 .sidebar {
     width: 280px;
     height: 100vh;
-    position: relative; /* Desktop */
+    position: sticky; /* Desktop */
     z-index: 1000;
     top: 0;
     padding: 2rem 1.75rem;
@@ -21,7 +21,7 @@
     overflow-y: auto;
 }
 
-/* Scrollbar minimalista (Recuperada) */
+/* Scrollbar minimalista */
 .sidebar::-webkit-scrollbar {
     width: 4px;
 }
@@ -32,13 +32,9 @@
     background-color: var(--color-bg-main) transparent;
     border-radius: 2px;
 }
-.sidebar {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-bg-main) transparent;
-}
 
 /* ==============================
-    Estilos de Texto y Navegación (Recuperados)
+    Tipografía y Navegación
 ================================ */
 .sidebar nav ul {
     list-style: none;
@@ -51,7 +47,7 @@
 }
 
 /* Section titles (About, Portfolio, etc.) */
-.sidebar nav li strong,
+/*.sidebar nav li strong,
 .sidebar-section-title {
     display: block;
     margin-top: 0.5rem;
@@ -60,7 +56,7 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--color-rose-aura, #EFA39D); /* Color Recuperado */
+    color: var(--color-rose-aura, #EFA39D);
 }
 
 /* Links */
@@ -88,7 +84,7 @@
 }
 
 /* ==============================
-    Sección de Contacto (Recuperada)
+    Sección de Contacto
 ================================ */
 .sidebar-contact {
     margin-top: 1.5rem;
@@ -143,22 +139,14 @@
         position: fixed;
         left: 0;
         top: 0;
-        width: 280px;
         transform: translateX(-100%);
-        transition: transform 0.35s ease;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 2000;
-        background-color: transparent; /* Se vuelve sólido al abrir */
-        box-shadow: none;
-    }
-
-    .sidebar:not(.open) {
-        transform: translateX(-8px); /* Pequeño margen para el gesto */
+        background-color: var(--color-bg-main);
     }
 
     .sidebar.open {
         transform: translateX(0);
-        background-color: var(--color-bg-main) !important;
-        padding: 2rem 1.75rem;
         box-shadow: 2px 0 12px rgba(0,0,0,0.25);
     }
 
@@ -168,6 +156,7 @@
         top: 1rem;
         left: 1rem;
         z-index: 2100;
+
         cursor: pointer;
         font-size: 1.5rem;
         color: var(--color-text-inverted);
@@ -176,7 +165,7 @@
         border-radius: 4px;
         padding: 0.25rem 0.5rem;
         box-shadow: 1px 1px 8px rgba(0,0,0,0.25);
-        transition: all 0.25s ease;
+        transition: background-color 0.3s ease, opacity 0.3s ease;
     }
 
     /* Ocultar contenido si no está abierto */
@@ -199,13 +188,12 @@
         right: 1.25rem;
         background-color: transparent;
         box-shadow: none;
-        opacity: 0.85;
-        z-index: 2101;
+        opacity: 0.8;
     }
 }
 
 /* ==============================
-    Animaciones y Overlay (Mejoras)
+    Animaciones y Overlay 
 ================================ */
 @keyframes sidebarFade {
     from { opacity: 0; transform: translateX(-6px); }

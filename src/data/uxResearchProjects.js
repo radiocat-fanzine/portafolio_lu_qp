@@ -4,6 +4,8 @@ import equilibrium1 from '../assets/ux-research/equilibrium/equilibrium-1.jpg'
 import equilibrium2 from '../assets/ux-research/equilibrium/equilibrium-2.jpg'
 import equilibrium3 from '../assets/ux-research/equilibrium/equilibrium-3.jpg'
 import equilibrium4 from '../assets/ux-research/equilibrium/equilibrium-4.jpg'
+import equilibrium5 from '../assets/ux-research/equilibrium/equilibrium-5.jpg'
+import equilibrium6 from '../assets/ux-research/equilibrium/equilibrium-6.jpg'
 
 import ittsaCard from '../assets/ux-research/ittsa/ittsa-card.jpg'
 import ittsaBanner from '../assets/ux-research/ittsa/ittsa-banner.jpg'
@@ -91,7 +93,9 @@ export const uxResearchProjects = [
         { image: equilibrium1, ratio: '1:1' },
         { image: equilibrium2, ratio: '1:1' },
         { image: equilibrium3, ratio: '1:1' },
-        { image: equilibrium4, ratio: '1:1' }
+        { image: equilibrium4, ratio: '1:1' },
+        { image: equilibrium5, ratio: '1:1' },
+        { image: equilibrium6, ratio: '1:1' },
         ],
         links: [
         {
@@ -169,10 +173,12 @@ export const uxResearchProjects = [
         }
         ],
         gallery: [
-        { image: ittsa1, ratio: '16:9' },
-        { image: ittsa2, ratio: '16:9' },
-        { image: ittsa3, ratio: '16:9' },
-        { image: ittsa4, ratio: '16:9' }
+        { image: ittsa1, ratio: '1:1' },
+        { image: ittsa2, ratio: '1:1' },
+        { image: ittsa3, ratio: '1:1' },
+        { image: ittsa4, ratio: '1:1' },
+        { image: ittsa5, ratio: '1:1' },
+        { image: ittsa6, ratio: '1:1' },
         ],
         links: [
         {

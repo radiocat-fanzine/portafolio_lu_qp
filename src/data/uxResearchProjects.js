@@ -16,7 +16,6 @@ import ittsa4 from '../assets/ux-research/ittsa/ittsa-4.jpg'
 import ittsa5 from '../assets/ux-research/ittsa/ittsa-5.jpg'
 import ittsa6 from '../assets/ux-research/ittsa/ittsa-6.jpg'
 
-
 export const uxResearchProjects = [
     {
         id: 'equilibrium',

@@ -1,31 +1,27 @@
 /* ==============================
-    Sidebar base
+    Sidebar base (Estructura Actualizada)
 ================================ */
-
 .sidebar {
     width: 280px;
     height: 100vh;
-    position: relative; /* desktop */
+    position: relative; /* Desktop */
     z-index: 1000;
     top: 0;
     padding: 2rem 1.75rem;
     background-color: var(--color-bg-main);
     color: var(--color-text-inverted);
-
-    /* separación visual del contenido */
+    
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-
-    /* sombra ligera de flotación */
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
-
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     overflow-y: auto;
 }
 
-/* Scrollbar minimalista (Restaurada) */
+/* Scrollbar minimalista (Recuperada) */
 .sidebar::-webkit-scrollbar {
     width: 4px;
 }
@@ -42,9 +38,8 @@
 }
 
 /* ==============================
-    Navegación (Restaurada)
+    Estilos de Texto y Navegación (Recuperados)
 ================================ */
-
 .sidebar nav ul {
     list-style: none;
     padding: 0;
@@ -65,7 +60,7 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--color-rose-aura, #EFA39D);
+    color: var(--color-rose-aura, #EFA39D); /* Color Recuperado */
 }
 
 /* Links */
@@ -83,7 +78,18 @@
     color: var(--color-green-lotus, #50C89F);
 }
 
-/* Contact section (Restaurada) */
+/* Títulos de sección específicos */
+.sidebar-section-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    color: var(--color-lila-water);
+}
+
+/* ==============================
+    Sección de Contacto (Recuperada)
+================================ */
 .sidebar-contact {
     margin-top: 1.5rem;
     padding-top: 2.2rem;
@@ -126,11 +132,10 @@
 }
 
 /* ==============================
-    Mobile & Hamburger 
+    Mobile & Hamburger (Lógica Mejorada)
 ================================ */
-
 .sidebar-hamburger {
-    display: none; /* Oculto en desktop */
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -138,14 +143,23 @@
         position: fixed;
         left: 0;
         top: 0;
+        width: 280px;
         transform: translateX(-100%);
         transition: transform 0.35s ease;
         z-index: 2000;
-        width: 280px;
+        background-color: transparent; /* Se vuelve sólido al abrir */
+        box-shadow: none;
+    }
+
+    .sidebar:not(.open) {
+        transform: translateX(-8px); /* Pequeño margen para el gesto */
     }
 
     .sidebar.open {
         transform: translateX(0);
+        background-color: var(--color-bg-main);
+        padding: 2rem 1.75rem;
+        box-shadow: 2px 0 12px rgba(0,0,0,0.25);
     }
 
     .sidebar-hamburger {
@@ -162,9 +176,10 @@
         border-radius: 4px;
         padding: 0.25rem 0.5rem;
         box-shadow: 1px 1px 8px rgba(0,0,0,0.25);
+        transition: all 0.25s ease;
     }
 
-    /* Mostrar/Ocultar contenido */
+    /* Ocultar contenido si no está abierto */
     .sidebar nav,
     .sidebar .sidebar-contact {
         display: none;
@@ -175,21 +190,24 @@
         display: block;
         animation: sidebarFade 0.25s ease both;
     }
+
+    /* Estilo del botón cuando el sidebar está abierto */
+    .sidebar.open .sidebar-hamburger {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.75rem;
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 0.85;
+    }
 }
 
 /* ==============================
-    Keyframes & Overlay
+    Animaciones y Overlay (Mejoras)
 ================================ */
-
 @keyframes sidebarFade {
-    from {
-        opacity: 0;
-        transform: translateX(-6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(-6px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 @media (max-width: 768px) {

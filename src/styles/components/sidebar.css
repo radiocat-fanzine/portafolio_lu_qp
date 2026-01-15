@@ -151,10 +151,12 @@
     }
 
     .sidebar-hamburger {
-        display: block;
-        position: fixed;
+        display: block !important;
+        position: fixed !important;
         top: 1rem;
-        left: 2rem;
+        left: 1.5rem !important;
+        right: auto !important;
+        width: auto !important;
         z-index: 2100;
 
         cursor: pointer;

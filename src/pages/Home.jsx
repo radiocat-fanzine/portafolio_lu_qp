@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import profile from '../assets/profile.jpg'
+import { FiEye, FiDownload } from 'react-icons/fi'
+
 
 function Home() {
     const [showCV, setShowCV] = useState(false)
@@ -43,12 +45,24 @@ function Home() {
         </ul>
 
         {/* CTA */}
-        <button
-            className="button button-primary"
-            onClick={() => setShowCV(!showCV)}
-        >
-            {showCV ? 'Hide CV' : 'View CV'}
-        </button>
+        <div className="home-cta">
+            <button
+                className="button button-primary"
+                onClick={() => setShowCV(!showCV)}
+            >
+                <FiEye className="button-icon" />
+                {showCV ? 'Hide CV' : 'View CV'}
+            </button>
+
+            <a
+                href="/cv/Luzmila-Quezada-Full-CV.pdf"
+                download
+                className="button button-secondary"
+            >
+                <FiDownload className="button-icon" />
+                Download Full CV
+            </a>
+        </div>
 
         {/* CV CARD */}
         {showCV && (
@@ -233,11 +247,11 @@ function Home() {
 
                         <li>
                             <strong>Notaría Pajares Alva</strong><br />
-                            <a href="#" target="_blank" rel="noreferrer">
+                            <a href="https://notaria-pajares-alva.vercel.app/" target="_blank" rel="noreferrer">
                                 Live demo (Vercel)
                             </a>{' '}
                             ·{' '}
-                            <a href="#" target="_blank" rel="noreferrer">
+                            <a href="https://github.com/radiocat-fanzine/notaria-pajares-alva" target="_blank" rel="noreferrer">
                                 GitHub
                             </a>
                         </li>

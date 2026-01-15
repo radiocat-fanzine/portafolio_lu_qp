@@ -96,12 +96,12 @@ export const uxResearchProjects = [
         links: [
         {
             label: 'View Figma Prototype',
-            url: '#',
+            url: 'https://www.figma.com/proto/eRQQVxnoGXUOpkvE1Lo5vc/PRESENTACI%C3%93N-FINAL--LUZMILA-QUEZADA-PAJARES-?page-id=0%3A1&type=design&node-id=13026-13463&viewport=361%2C297%2C0.08&t=ab6z248sGmju9hU2-1&scaling=scale-down&starting-point-node-id=13001%3A13533&show-proto-sidebar=1',
             type: 'figma'
         },
         {
             label: 'View UX Research Report (Figma – ES)',
-            url: '#',
+            url: 'https://www.figma.com/proto/eRQQVxnoGXUOpkvE1Lo5vc/PRESENTACI%C3%93N-FINAL--LUZMILA-QUEZADA-PAJARES-?page-id=13302%3A16859&node-id=13302-16860&scaling=contain&content-scaling=fixed&t=m4sWirPFErfuDp5H-1',
             type: 'ux-report'
         }
         ]
@@ -177,12 +177,12 @@ export const uxResearchProjects = [
         links: [
         {
             label: 'View Figma Prototype',
-            url: '#',
+            url: 'https://www.figma.com/proto/1RKztWU2JCdpMeURVI7kEq/ITTSA--FINAL-REPORT--LUZMILA-QUEZADA?page-id=221%3A309&node-id=904-12027&p=f&viewport=-3454%2C1927%2C0.26&t=QCxbpVU9XHfqrCaO-1&scaling=contain&content-scaling=fixed&starting-point-node-id=904%3A12027',
             type: 'figma'
         },
         {
             label: 'View UX Research Report (Figma – ES)',
-            url: '#',
+            url: 'https://www.figma.com/proto/1RKztWU2JCdpMeURVI7kEq/ITTSA--FINAL-REPORT--LUZMILA-QUEZADA?page-id=0%3A1&node-id=1-2&viewport=319%2C212%2C0.02&t=zkk68PLq0Fr0bRrf-1&scaling=contain&content-scaling=fixed',
             type: 'ux-report'
         }
         ]

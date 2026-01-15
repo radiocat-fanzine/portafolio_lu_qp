@@ -14,6 +14,14 @@ import simaru2 from '../assets/product/simaru/simaru-screen-2.jpg'
 import simaru3 from '../assets/product/simaru/simaru-screen-3.jpg'
 import simaru4 from '../assets/product/simaru/simaru-screen-4.jpg'
 
+// Notaria assets
+import notariaCard from '../assets/product/notaria-pajares/notaria-card.jpg'
+import notariaBanner from '../assets/product/notaria-pajares/notaria-banner.jpg'
+import notaria1 from '../assets/product/notaria-pajares/notaria-screen-1.jpg'
+import notaria2 from '../assets/product/notaria-pajares/notaria-screen-2.jpg'
+import notaria3 from '../assets/product/notaria-pajares/notaria-screen-3.jpg'
+import notaria4 from '../assets/product/notaria-pajares/notaria-screen-4.jpg'
+
 export const productProjects = [
     {
         id: 'metroapp',
@@ -168,14 +176,130 @@ export const productProjects = [
         links: [
         {
             label: 'View on GitHub',
-            url: '#',
+            url: 'https://github.com/radiocat-fanzine/react-simaru',
             type: 'github'
         },
         {
             label: 'View Live Website',
-            url: '#',
+            url: 'https://simaru-store.vercel.app/',
             type: 'live'
         }
+        ]
+    },
+{
+        id: 'notaria-pajares',
+        meta: {
+            title: 'Notary Pajares Alva Digital Hub',
+            subtitle: 'End-to-End Legal Service Platform',
+            tech: 'React · Design Systems · Full-Stack Architecture',
+            category: 'Web App / Enterprise Solution'
+        },
+        card: {
+            image: notariaCard,
+            alt: 'Notaría Pajares Alva digital platform',
+            ratio: '1:1'
+        },
+        hero: {
+            banner: notariaBanner, 
+            alt: 'Notary institutional hero banner',
+            tagline: {
+                title: 'Bridging the gap between citizens and legal certainty',
+                subtitle: 'A dual-system architecture designed for public intake and internal legal processing.'
+            }
+        },
+        sections: [
+            {
+                id: 'overview',
+                title: 'Overview',
+                content: [
+                    {
+                        type: 'text',
+                        data:
+                        'The project consists of a comprehensive digital transformation for the Pajares Alva Notary Office. It is engineered as a two-fold ecosystem: a high-end institutional frontend for client intake and an internal administrative dashboard for real-time order management and legal validation.'
+                    }
+                ]
+            },
+            {
+                id: 'visual-identity',
+                title: 'Institutional UI & Identity',
+                content: [
+                    {
+                        type: 'list',
+                        data: [
+                            'Scalable Design System using CSS Tokens to ensure brand consistency across both platforms.',
+                            'High-end Navigation: Centered vertical branding with overflow containment for a prestige look.',
+                            'Typography Strategy: Classic Serif for authority paired with modern Inter for high usability.',
+                            'Prestige Layout: 120px elevated Navbar designed to provide institutional "breathing room".'
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'client-system',
+                title: 'Phase I: Public Intake System',
+                content: [
+                    {
+                        type: 'list',
+                        data: [
+                            'Frictionless multi-step appointment flow for complex legal document submission.',
+                            'Mobile-first responsive architecture ensuring accessibility for users on the go.',
+                            'Dynamic form validation tailored to specific Peruvian notary requirements.'
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'internal-system',
+                title: 'Phase II: Management Dashboard',
+                content: [
+                    {
+                        type: 'list',
+                        data: [
+                            'B2B Private Interface: Real-time visualization of incoming legal orders for notary staff.',
+                            'Status Workflow: End-to-end tracking from initial request to final legal execution.',
+                            'Role-based Access Control (RBAC) to ensure sensitive legal data security.'
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'architecture',
+                title: 'Architecture & Scalability',
+                content: [
+                    {
+                        type: 'list',
+                        data: [
+                            'Modular React architecture separating the institutional layer from transactional flows.',
+                            'Shared Component Library: Reusable UI patterns between the public site and internal tools (DRY principles).',
+                            'State Management: Robust logic for complex legal data persistence and real-time status updates.',
+                            'Global CSS Token System: Centralized control for color accessibility and AA contrast compliance.'
+                        ]
+                    }
+                ]
+            }
+        ],
+        gallery: [
+            { image: notaria1, ratio: '1:1' },
+            { image: notaria2, ratio: '1:1' },
+            { image: notaria3, ratio: '1:1' },
+            { image: notaria4, ratio: '1:1' }
+        ],
+        links: [
+            {
+                label: 'View on GitHub',
+                url: 'https://github.com/radiocat-fanzine/notaria-pajares-alva',
+                type: 'github'
+            },
+            {
+                label: 'View Appointment System',
+                url: 'https://notaria-pajares-alva.vercel.app/',
+                type: 'live'
+            },
+            {
+                label: 'View Management System',
+                url: '#',
+                type: 'live'
+            }
         ]
     }
 ]

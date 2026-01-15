@@ -157,7 +157,7 @@
 
     .sidebar.open {
         transform: translateX(0);
-        background-color: var(--color-bg-main);
+        background-color: var(--color-bg-main) !important;
         padding: 2rem 1.75rem;
         box-shadow: 2px 0 12px rgba(0,0,0,0.25);
     }
@@ -195,10 +195,12 @@
     .sidebar.open .sidebar-hamburger {
         position: absolute;
         top: 1.5rem;
-        left: 1.75rem;
+        left: auto; 
+        right: 1.25rem;
         background-color: transparent;
         box-shadow: none;
         opacity: 0.85;
+        z-index: 2101;
     }
 }
 

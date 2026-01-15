@@ -27,8 +27,8 @@ main {
 /* Tablet / mitad desktop */
 @media (max-width: 1200px) {
     .layout-content {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         max-width: 900px; /* ajusta un poco para tablet */
     }
 }
@@ -36,17 +36,22 @@ main {
 /* Tablet y móviles */
 @media (max-width: 992px) {
     .layout-content {
-        padding-left: 0.1rem;
-        padding-right: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         max-width: 100%; /* ocupa todo el ancho disponible */
     }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    main {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+    .layout-container {
+        flex-direction: column; /* Apilado para evitar conflictos de flex */
+    }
+
+    .layout-content, main {
+        padding-left: 4.5rem !important; 
+        padding-right: 1.5rem !important;
+        padding-top: 1rem;
     }
 }
 

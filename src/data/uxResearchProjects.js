@@ -13,6 +13,8 @@ import ittsa1 from '../assets/ux-research/ittsa/ittsa-1.jpg'
 import ittsa2 from '../assets/ux-research/ittsa/ittsa-2.jpg'
 import ittsa3 from '../assets/ux-research/ittsa/ittsa-3.jpg'
 import ittsa4 from '../assets/ux-research/ittsa/ittsa-4.jpg'
+import ittsa5 from '../assets/ux-research/ittsa/ittsa-5.jpg'
+import ittsa6 from '../assets/ux-research/ittsa/ittsa-6.jpg'
 
 
 export const uxResearchProjects = [

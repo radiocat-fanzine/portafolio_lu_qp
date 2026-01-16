@@ -9,6 +9,8 @@ import simaruG1 from '../assets/graphic/simaru/simaru-g-01.jpg'
 import simaruG2 from '../assets/graphic/simaru/simaru-g-02.jpg'
 import simaruG3 from '../assets/graphic/simaru/simaru-g-03.jpg'
 import simaruG4 from '../assets/graphic/simaru/simaru-g-04.jpg'
+import simaruG5 from '../assets/graphic/simaru/simaru-g-05.jpg'
+import simaruG6 from '../assets/graphic/simaru/simaru-g-06.jpg'
 
 // AMARUMI
 import amarumiGCard from '../assets/graphic/amarumi/amarumi-g-card.jpg'
@@ -17,6 +19,8 @@ import amarumiG1 from '../assets/graphic/amarumi/amarumi-g-01.jpg'
 import amarumiG2 from '../assets/graphic/amarumi/amarumi-g-02.jpg'
 import amarumiG3 from '../assets/graphic/amarumi/amarumi-g-03.jpg'
 import amarumiG4 from '../assets/graphic/amarumi/amarumi-g-04.jpg'
+import amarumiG5 from '../assets/graphic/amarumi/amarumi-g-05.jpg'
+import amarumiG6 from '../assets/graphic/amarumi/amarumi-g-06.jpg'
 
 // NOTARÍA PAJARES ALVA
 import notariaGCard from '../assets/graphic/notaria-pajares/notaria-g-card.jpg'
@@ -25,6 +29,8 @@ import notariaG1 from '../assets/graphic/notaria-pajares/notaria-g-01.jpg'
 import notariaG2 from '../assets/graphic/notaria-pajares/notaria-g-02.jpg'
 import notariaG3 from '../assets/graphic/notaria-pajares/notaria-g-03.jpg'
 import notariaG4 from '../assets/graphic/notaria-pajares/notaria-g-04.jpg'
+import notariaG5 from '../assets/graphic/notaria-pajares/notaria-g-05.jpg'
+import notariaG6 from '../assets/graphic/notaria-pajares/notaria-g-06.jpg'
 
 // ================================
 // GRAPHIC DESIGN PROJECTS
@@ -34,7 +40,7 @@ export const graphicDesignProjects = [
     {
         id: 'simaru-graphic',
         meta: {
-        title: 'Simaru: Engineering Sustainability',
+        title: 'Simaru: Designing Sustainability',
         subtitle: 'Brand Evolution & Information Design',
         tech: 'Brand Strategy · Packaging · Information Design',
         category: 'branding'
@@ -99,7 +105,9 @@ export const graphicDesignProjects = [
         { image: simaruG1, ratio: '1:1' },
         { image: simaruG2, ratio: '1:1' },
         { image: simaruG3, ratio: '1:1' },
-        { image: simaruG4, ratio: '1:1' }
+        { image: simaruG4, ratio: '1:1' },
+        { image: simaruG5, ratio: '1:1' },
+        { image: simaruG6, ratio: '1:1' }
         ],
         links: []
     },
@@ -171,7 +179,9 @@ export const graphicDesignProjects = [
         { image: amarumiG1, ratio: '1:1' },
         { image: amarumiG2, ratio: '1:1' },
         { image: amarumiG3, ratio: '1:1' },
-        { image: amarumiG4, ratio: '1:1' }
+        { image: amarumiG4, ratio: '1:1' },
+        { image: amarumiG5, ratio: '1:1' },
+        { image: amarumiG6, ratio: '1:1' }
         ],
         links: []
     },
@@ -243,7 +253,9 @@ export const graphicDesignProjects = [
         { image: notariaG1, ratio: '1:1' },
         { image: notariaG2, ratio: '1:1' },
         { image: notariaG3, ratio: '1:1' },
-        { image: notariaG4, ratio: '1:1' }
+        { image: notariaG4, ratio: '1:1' },
+        { image: notariaG5, ratio: '1:1' },
+        { image: notariaG6, ratio: '1:1' }
         ],
         links: []
     }

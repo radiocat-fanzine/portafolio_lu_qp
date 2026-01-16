@@ -159,7 +159,9 @@
         width: auto !important;
         z-index: 3000;
 
-        transform: translateX(0) !important;
+        transform: translateX(100vw) translateX(-1.5rem) !important;
+        /* Si lo anterior no lo centra, usa simplemente: */
+        /* margin-left: 100%; */
 
         cursor: pointer;
         font-size: 1.5rem;
@@ -186,13 +188,13 @@
 
     /* Estilo del botón cuando el sidebar está abierto */
     .sidebar.open .sidebar-hamburger {
-        position: fixed !important;
+        position: absolute !important;
         top: 1.5rem;
-        left: 220px !important; 
-        right: auto !important;
+        left: auto !important; 
+        right: 1rem !important;
+        transform: none !important;
         background-color: transparent !important;
         box-shadow: none !important;
-        opacity: 0.8;
     }
 }
 

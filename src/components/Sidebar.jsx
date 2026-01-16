@@ -21,16 +21,16 @@ function Sidebar() {
 
     return (
         <>
+            {/* Botón hamburguesa */}
+            <button
+                className="sidebar-hamburger"
+                onClick={() => setOpen(!open)}
+                aria-label={open ? "Close menu" : "Open menu"}
+            >
+                {open ? '✕' : '☰'}
+            </button>
+            
             <aside className={`sidebar ${open ? 'open' : ''}`}>
-                {/* Botón hamburguesa */}
-                <button
-                    className="sidebar-hamburger"
-                    onClick={() => setOpen(!open)}
-                    aria-label={open ? "Close menu" : "Open menu"}
-                >
-                    {open ? '✕' : '☰'}
-                </button>
-
                 <nav>
                     <ul>
                         <li className="sidebar-section-title">About</li>

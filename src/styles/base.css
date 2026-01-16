@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     scrollbar-width: thin;          /* Firefox */
-    scrollbar-color: #ff8a7a transparent; /* Firefox: color salmón */
+    scrollbar-color: var(--color-lila-water) transparent;
 }
 
 /* Barra global en Chrome, Edge y Safari */
@@ -23,16 +23,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; /* Fondo de la barra */
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ff8a7a; /* El salmón de tu marca */
-    border-radius: 10px;       /* Bordes redondeados */
+    background-color: var(--color-lila-water);
+    border-radius: 10px;     
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #e07668; 
+    background-color: var(--color-lila-water); 
 }
 
 body {

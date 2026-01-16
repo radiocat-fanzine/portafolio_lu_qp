@@ -157,7 +157,9 @@
         left: 1.5rem !important;
         right: auto !important;
         width: auto !important;
-        z-index: 2100;
+        z-index: 3000;
+
+        transform: translateX(0) !important;
 
         cursor: pointer;
         font-size: 1.5rem;
@@ -186,7 +188,7 @@
     .sidebar.open .sidebar-hamburger {
         position: absolute;
         top: 1.5rem;
-        left: auto; 
+        left: 230px !important; 
         right: 1.25rem;
         background-color: transparent;
         box-shadow: none;

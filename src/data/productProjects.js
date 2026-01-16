@@ -5,6 +5,8 @@ import metro1 from '../assets/product/metroapp/metroapp-screen-1.jpg'
 import metro2 from '../assets/product/metroapp/metroapp-screen-2.jpg'
 import metro3 from '../assets/product/metroapp/metroapp-screen-3.jpg'
 import metro4 from '../assets/product/metroapp/metroapp-screen-4.jpg'
+import metro5 from '../assets/product/metroapp/metroapp-screen-5.jpg'
+import metro6 from '../assets/product/metroapp/metroapp-screen-6.jpg'
 
 // Simaru assets
 import simaruCard from '../assets/product/simaru/simaru-card.jpg'
@@ -13,6 +15,8 @@ import simaru1 from '../assets/product/simaru/simaru-screen-1.jpg'
 import simaru2 from '../assets/product/simaru/simaru-screen-2.jpg'
 import simaru3 from '../assets/product/simaru/simaru-screen-3.jpg'
 import simaru4 from '../assets/product/simaru/simaru-screen-4.jpg'
+import simaru5 from '../assets/product/simaru/simaru-screen-5.jpg'
+import simaru6 from '../assets/product/simaru/simaru-screen-6.jpg'
 
 // Notaria assets
 import notariaCard from '../assets/product/notaria-pajares/notaria-card.jpg'
@@ -21,6 +25,8 @@ import notaria1 from '../assets/product/notaria-pajares/notaria-screen-1.jpg'
 import notaria2 from '../assets/product/notaria-pajares/notaria-screen-2.jpg'
 import notaria3 from '../assets/product/notaria-pajares/notaria-screen-3.jpg'
 import notaria4 from '../assets/product/notaria-pajares/notaria-screen-4.jpg'
+import notaria5 from '../assets/product/notaria-pajares/notaria-screen-5.jpg'
+import notaria6 from '../assets/product/notaria-pajares/notaria-screen-6.jpg'
 
 export const productProjects = [
     {
@@ -89,7 +95,9 @@ export const productProjects = [
         { image: metro1, ratio: '1:1' },
         { image: metro2, ratio: '1:1' },
         { image: metro3, ratio: '1:1' },
-        { image: metro4, ratio: '1:1' }
+        { image: metro4, ratio: '1:1' },
+        { image: metro5, ratio: '1:1' },
+        { image: metro6, ratio: '1:1' },
         ],
         links: [
         {
@@ -171,7 +179,9 @@ export const productProjects = [
         { image: simaru1, ratio: '1:1' },
         { image: simaru2, ratio: '1:1' },
         { image: simaru3, ratio: '1:1' },
-        { image: simaru4, ratio: '1:1' }
+        { image: simaru4, ratio: '1:1' },
+        { image: simaru5, ratio: '1:1' },
+        { image: simaru6, ratio: '1:1' }
         ],
         links: [
         {
@@ -282,7 +292,9 @@ export const productProjects = [
             { image: notaria1, ratio: '1:1' },
             { image: notaria2, ratio: '1:1' },
             { image: notaria3, ratio: '1:1' },
-            { image: notaria4, ratio: '1:1' }
+            { image: notaria4, ratio: '1:1' },
+            { image: notaria5, ratio: '1:1' },
+            { image: notaria6, ratio: '1:1' },
         ],
         links: [
             {

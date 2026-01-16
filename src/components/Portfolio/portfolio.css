@@ -149,6 +149,12 @@
     padding: 2rem;
     z-index: 2000;
     overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE y Edge */
+}
+
+.project-modal-overlay::-webkit-scrollbar {
+    display: none;
 }
 
 .project-modal {

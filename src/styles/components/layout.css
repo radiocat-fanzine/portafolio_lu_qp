@@ -9,6 +9,23 @@
     max-width: 1000px; /* ancho máximo de contenido */
     margin-left: auto; /* centra respecto al espacio disponible */
     margin-right: auto; /* centra respecto al espacio disponible */
+    /* Firefox: Barra delgada */
+    scrollbar-width: thin;
+    scrollbar-color: #ff8a7a transparent; /* Color salmón de tu marca */
+}
+
+/* Chrome, Edge y Safari */
+.layout-content::-webkit-scrollbar {
+    width: 6px; /* Muy delgada */
+}
+
+.layout-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.layout-content::-webkit-scrollbar-thumb {
+    background-color: #ff8a7a; /* Color salmón */
+    border-radius: 20px;
 }
 
 main {

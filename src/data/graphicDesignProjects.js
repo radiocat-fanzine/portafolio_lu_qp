@@ -233,7 +233,7 @@ export const graphicDesignProjects = [
                 '48cm folders and custom institutional logbooks',
                 '2x2 cm official seals and technical stationery',
                 'Prussian Blue palette with soft plaster textures',
-                'Playfair Display (heritage) + Montserrat (efficiency)'
+                'Serif for heritage + Sans Serif for efficiency'
                 ]
             }
             ]

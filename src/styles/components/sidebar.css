@@ -157,7 +157,7 @@
         position: fixed !important;
         top: 1rem;
         left: 1.5rem;
-        z-index: 1900;
+        z-index: 3000 !important;
 
         transition: all 0.4s ease;
 
@@ -185,7 +185,7 @@
     }
 
     /* Estilo del botón cuando el sidebar está abierto */
-    .sidebar.open ~ .sidebar-hamburger {
+    .sidebar-hamburger .open {
         left: 230px !important; 
         background-color: transparent !important;
         box-shadow: none !important;

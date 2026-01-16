@@ -186,12 +186,12 @@
 
     /* Estilo del botón cuando el sidebar está abierto */
     .sidebar.open .sidebar-hamburger {
-        position: absolute;
+        position: fixed !important;
         top: 1.5rem;
-        left: 230px !important; 
-        right: 1.25rem;
-        background-color: transparent;
-        box-shadow: none;
+        left: 220px !important; 
+        right: auto !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
         opacity: 0.8;
     }
 }

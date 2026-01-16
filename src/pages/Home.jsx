@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import profile from '../assets/profile.jpg'
 import { FiEye, FiDownload } from 'react-icons/fi'
+import cvFile from '../assets/documents/cv-luzmila-quezada-pajares.pdf';
 
 
 function Home() {
@@ -55,8 +56,8 @@ function Home() {
             </button>
 
             <a
-                href="/cv/Luzmila-Quezada-Full-CV.pdf"
-                download
+                href={cvFile}
+                download="CV_Luzmila_Quezada.pdf"
                 className="button button-secondary"
             >
                 <FiDownload className="button-icon" />

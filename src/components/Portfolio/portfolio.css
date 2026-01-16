@@ -147,7 +147,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 2rem;
-    z-index: 2500 !important;
+    z-index: 4000 !important;
     overflow-y: auto;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE y Edge */

@@ -152,20 +152,20 @@
         transform: translateX(0);
     }
 
-    .sidebar-hamburger {
+    button.sidebar-hamburger {
         display: block !important;
         position: fixed !important;
-        top: 1rem;
-        left: 1.5rem;
-        z-index: 3000 !important;
+        top: 1rem !important;
+        left: 1.5rem !important;
+        z-index: 9999 !important;
 
-        transition: all 0.4s ease;
+        transition: all 0.4s ease-in-out !important;
 
         /* Estilos del botón */
         cursor: pointer;
         font-size: 1.5rem;
-        color: var(--color-text-inverted);
-        background-color: var(--color-lila-water);
+        color: white !important;
+        background-color: #BB11BB !important;
         border: none;
         border-radius: 6px;
         padding: 0.4rem 0.6rem;
@@ -185,11 +185,11 @@
     }
 
     /* Estilo del botón cuando el sidebar está abierto */
-    .sidebar-hamburger .open {
+    button.sidebar-hamburger.open {
         left: 230px !important; 
         background-color: transparent !important;
         box-shadow: none !important;
-        color: var(--color-text-inverted);
+        color: #ff8a7a;
     }
 }
 
